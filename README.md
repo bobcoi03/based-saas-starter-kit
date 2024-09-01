@@ -101,7 +101,3 @@ If you find this project helpful, consider buying the creator a coffee:
 ## Follow the Creator
 
 Follow [@justwrapapi on Twitter](https://twitter.com/justwrapapi) for updates and more projects!
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
