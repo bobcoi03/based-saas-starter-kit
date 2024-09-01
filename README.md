@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Based SaaS Starter Kit
+
+Launch your SaaS faster with this comprehensive starter kit. Built with Next.js, Stripe, Supabase, and shadcn/ui.
+
+## Features
+
+- Stripe Integration for secure payments and subscription management
+- Google Analytics for tracking user behavior and optimizing performance
+- Supabase Backend for PostgreSQL with real-time and RESTful API
+- shadcn/ui Components for customizable, accessible React components
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js (v14 or later)
+- npm or yarn
+- Supabase account
+- Stripe account
+- Google Analytics account
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/bobcoi03/based-saas-starter-kit.git
+   cd based-saas-starter-kit
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following variables:
+
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=<your_supabase_project_url>
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=<your_supabase_anon_key>
+   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key_here
+   GOOGLE_ANALYTICS=your-analytics-key
+   ```
+
+### Running the Development Server
+
+```
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+npm run build
+# or
+yarn build
+```
 
-## Learn More
+### Running Production Build
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm start
+# or
+yarn start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `/utils/supabase/`: Contains Supabase client, middleware, and server utilities
+  - `client.ts`
+  - `middleware.ts`
+  - `server.ts`
 
-## Deploy on Vercel
+- `/utils/stripe/`: Contains Stripe utility
+  - `stripe.ts`: Sets up and exports the Stripe client
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Supabase
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project uses Supabase for backend services. To generate types for your Supabase tables, refer to the [Supabase documentation on generating types](https://supabase.com/docs/guides/api/rest/generating-types).
+
+## Stripe
+
+Stripe is used for payment processing. For more information on implementing Stripe features, refer to the [Stripe documentation](https://docs.stripe.com/?locale=en-GB).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Support
+
+If you find this project helpful, consider buying the creator a coffee:
+
+[Buy Me a Coffee](https://buymeacoffee.com/luongquangn)
+
+## Follow the Creator
+
+Follow [@justwrapapi on Twitter](https://twitter.com/justwrapapi) for updates and more projects!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
